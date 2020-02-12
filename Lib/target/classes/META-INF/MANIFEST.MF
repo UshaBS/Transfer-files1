@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: agunture
+Build-Jdk: 12.0.1
+Implementation-Title: Lib
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.cg
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/Lib
+Created-By: Maven Integration for Eclipse
+

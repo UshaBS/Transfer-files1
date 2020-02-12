@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.cg.Lib.LibApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 6.342 s <<< FAILURE! - in com.cg.Lib.LibApplicationTests
+contextLoads(com.cg.Lib.LibApplicationTests)  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'libApplication': Unsatisfied dependency expressed through field 'sender'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sender': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'app.topic.part' in value "${app.topic.part}"
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sender': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'app.topic.part' in value "${app.topic.part}"
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'app.topic.part' in value "${app.topic.part}"
+

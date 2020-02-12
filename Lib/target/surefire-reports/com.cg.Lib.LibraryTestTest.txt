@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.cg.Lib.LibraryTestTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0 s <<< FAILURE! - in com.cg.Lib.LibraryTestTest
+test(com.cg.Lib.LibraryTestTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError: Not yet implemented
+	at com.cg.Lib.LibraryTestTest.test(LibraryTestTest.java:11)
+
