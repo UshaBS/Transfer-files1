@@ -1,0 +1,316 @@
+{
+	"info": {
+		"_postman_id": "1c65ef19-cec3-407e-96d3-661d4b0eaedb",
+		"name": "Universitycollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8005/programsOfferedpost",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"programName\":\"java\",\n  \"description\":\"usefull\",\n  \"applicantEligibility\":\"btech\",\n  \"duration\":3,\n  \"degreeCertificateOffered\":\"required\"\n }\n\n\n\n \n "
+				},
+				"url": {
+					"raw": "http://localhost:8005/programsOfferedpost",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"programsOfferedpost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8005/applyapplication",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"fullName\":\"Siya\",\n  \"dateOfBirth\":\"02/01/1996\",\n  \"highestQualification\":\"be\",\n  \"marksObtained\":500,\n  \"goals\":\"developer\",\n \"emailId\":\"siya@gmail.com\",\n  \"scheduledProgramId\":1000,\n  \"status\":\"applied\",\n  \"dateOfInterview\":null\n }\n\n\n\n\n \n "
+				},
+				"url": {
+					"raw": "http://localhost:8005/applyapplication",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"applyapplication"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8005/programsScheduled",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\"programName\":\"java\",\n  \n\"location\":\"bangalore\",\n  \n\"startDate\":\"02/01/1996\",\n  \n\"endDate\":\"02/01/2000\",\n \n \"sessionsPerWeek\":3\n }\n\n\n\n \n "
+				},
+				"url": {
+					"raw": "http://localhost:8005/programsScheduled",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"programsScheduled"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8005/scheduledprograms",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"fullName\":\"Siya\",\n  \"dateOfBirth\":\"02/01/1996\",\n  \"highestQualification\":\"be\",\n  \"marksObtained\":500,\n  \"goals\":\"developer\",\n \"emailId\":\"siya@gmail.com\",\n  \"scheduledProgramId\":1001,\n  \"status\":\"applied\",\n  \"dateOfInterview\":null\n }\n\n\n\n \n "
+				},
+				"url": {
+					"raw": "http://localhost:8005/scheduledprograms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"scheduledprograms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8005/applicationstatus/101",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"fullName\":\"Siya\",\n  \"dateOfBirth\":\"02/01/1996\",\n  \"highestQualification\":\"be\",\n  \"marksObtained\":500,\n  \"goals\":\"developer\",\n \"emailId\":\"siya@gmail.com\",\n  \"scheduledProgramId\":1001,\n  \"status\":\"accepted\",\n  \"dateOfInterview\":\"24/04/2019\"\n }\n\n\n\n \n "
+				},
+				"url": {
+					"raw": "http://localhost:8005/applicationstatus/101",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"applicationstatus",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8005/programsScheduled",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"scheduledProgramId\": 1001,\n    \"programName\": \"java\",\n    \"location\": \"pune\",\n    \"startDate\": \"02/01/1996\",\n    \"endDate\": \"02/01/2000\",\n    \"sessionsPerWeek\": 5\n }\n\n\n\n \n "
+				},
+				"url": {
+					"raw": "http://localhost:8005/programsScheduled",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"programsScheduled"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8005/programsOffered/java",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"programName\":\"java\",\n  \"description\":\"advance java and full stack\",\n  \"applicantEligibility\":\"btech\",\n  \"duration\":3,\n  \"degreeCertificateOffered\":\"required\"\n }\n\n\n\n \n "
+				},
+				"url": {
+					"raw": "http://localhost:8005/programsOffered/java",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"programsOffered",
+						"java"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8005/getapplicationstatus/101",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"programName\":\"java\",\n  \"description\":\"advance java and full stack\",\n  \"applicantEligibility\":\"btech\",\n  \"duration\":3,\n  \"degreeCertificateOffered\":\"required\"\n }\n\n\n\n \n "
+				},
+				"url": {
+					"raw": "http://localhost:8005/getapplicationstatus/101",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"getapplicationstatus",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8005/programsOffered",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"programName\":\"java\",\n  \"description\":\"advance java and full stack\",\n  \"applicantEligibility\":\"btech\",\n  \"duration\":5,\n  \"degreeCertificateOffered\":\"required\"\n }\n\n\n\n \n "
+				},
+				"url": {
+					"raw": "http://localhost:8005/programsOffered",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"programsOffered"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8005/ProgramsScheduledProgram/02-01-1996/02-01-2000",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\"programName\":\"java\",\n  \n\"location\":\"bangalore\",\n  \n\"startDate\":\"02/01/1996\",\n  \n\"endDate\":\"02/01/2000\",\n \n \"sessionsPerWeek\":3\n }\n\n\n\n \n "
+				},
+				"url": {
+					"raw": "http://localhost:8005/ProgramsScheduledProgram/02-01-1996/02-01-2000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8005",
+					"path": [
+						"ProgramsScheduledProgram",
+						"02-01-1996",
+						"02-01-2000"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

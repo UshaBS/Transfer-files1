@@ -1,0 +1,381 @@
+swagger: "2.0"
+info: 
+	description: "This is a sample server"
+	version: "2.0"
+	title: "Demo"
+host: "localhost"
+basePath: "/v2"
+tags: 
+- name: "University"
+	description: "everything about your University"
+	externalDocs: 
+		description: "Find out more"
+		url: "http://swagger.io"
+- name: "Student"
+	description: "operations about users"
+	externalDocs: 
+		description: "Find out more"
+		url: "http://swagger.io"
+schemes:
+- "https"
+- "http"
+paths:
+	/Bookstore:
+		post:
+			tags: 
+			- "Bookstore"
+			summary: "Add a new Bookstore"
+			description: "Bookstore object that needs to be added to the store"
+			operationId: "addBookstore"
+			consumes:
+			- "application/json"
+			- "application/xml"
+			produces:
+			- "application/json"
+			- "application/xml"
+			parameters: 
+			- in: "body"
+				name: "body"
+				description: "Bookstoreobject that needs to be added to the store"
+				required: true
+				schema: 
+					$ref: 						"#/definitions/Bookstore"
+			responses: 
+				400: 
+					description: "Invalid input"
+				404: 
+					description: "object not found"
+				405: 
+					description: "Exception"
+		put: 
+			tags: 
+			- "Bookstore"
+			summary: "update Bookstore"
+			description: "Bookstore object that needs to be updated to the store"
+			operationId: "updateBookstore"
+			consumes:
+			- "application/json"
+			- "application/xml"
+			produces:
+			- "application/json"
+			- "application/xml"
+			parameters: 
+			- in: "body"
+				name: "body"
+				description: "Bookstoreobject that needs to be added to the store"
+				required: true
+				schema: 
+					$ref: 						"#/definitions/Bookstore"
+			responses: 
+				400: 
+					description: "Invalid input"
+				404: 
+					description: "object not found"
+				405: 
+					description: "Exception"
+		delete: 
+			tags: 
+			- "Bookstore"
+			summary: "delete Bookstore"
+			description: "Bookstore object that needs to be deleted from the store"
+			operationId: "deleteBookstore"
+			consumes:
+			- "application/json"
+			- "application/xml"
+			produces:
+			- "application/json"
+			- "application/xml"
+			parameters: 
+			- in: "body"
+				name: "body"
+				description: "Bookstoreobject that needs to be deleted from the store"
+				required: true
+				schema: 
+					$ref: 						"#/definitions/Bookstore"
+			responses: 
+				400: 
+					description: "Invalid input"
+				404: 
+					description: "object not found"
+				405: 
+					description: "Exception"
+	/Bookstore/{regno}:
+		get: 
+			tags: 
+			- "Bookstore"
+			summary: "get a Bookstore"
+			description: "Bookstore object that should be get"
+			operationId: "getBookstore"
+			produces:
+			- "application/json"
+			- "application/xml"
+			parameters: 
+			- name: "regno"
+				in: "path"
+				description: "Bookstore object that should be get from the store"
+				required: true
+				type: "integer"
+				format: "int64"
+			responses: 
+				400: 
+					description: "Invalid input"
+					schema: 
+						$ref: 						"#/definitions/Bookstore"
+				404: 
+					description: "object not found"
+				405: 
+					description: "Exception"
+	/Book:
+		post:
+			tags: 
+			- "Book"
+			summary: "Add a new Book"
+			description: "Book object that needs to be added to the store"
+			operationId: "addBook"
+			consumes:
+			- "application/json"
+			- "application/xml"
+			produces:
+			- "application/json"
+			- "application/xml"
+			parameters: 
+			- in: "body"
+				name: "body"
+				description: "Bookobject that needs to be added to the store"
+				required: true
+				schema: 
+					$ref: 						"#/definitions/Book"
+			responses: 
+				400: 
+					description: "Invalid input"
+				404: 
+					description: "object not found"
+				405: 
+					description: "Exception"
+		put: 
+			tags: 
+			- "Book"
+			summary: "update Book"
+			description: "Book object that needs to be updated to the store"
+			operationId: "updateBook"
+			consumes:
+			- "application/json"
+			- "application/xml"
+			produces:
+			- "application/json"
+			- "application/xml"
+			parameters: 
+			- in: "body"
+				name: "body"
+				description: "Bookobject that needs to be added to the store"
+				required: true
+				schema: 
+					$ref: 						"#/definitions/Book"
+			responses: 
+				400: 
+					description: "Invalid input"
+				404: 
+					description: "object not found"
+				405: 
+					description: "Exception"
+		delete: 
+			tags: 
+			- "Book"
+			summary: "delete Book"
+			description: "Book object that needs to be deleted from the store"
+			operationId: "deleteBook"
+			consumes:
+			- "application/json"
+			- "application/xml"
+			produces:
+			- "application/json"
+			- "application/xml"
+			parameters: 
+			- in: "body"
+				name: "body"
+				description: "Bookobject that needs to be deleted from the store"
+				required: true
+				schema: 
+					$ref: 						"#/definitions/Book"
+			responses: 
+				400: 
+					description: "Invalid input"
+				404: 
+					description: "object not found"
+				405: 
+					description: "Exception"
+	/Book/{regno}:
+		get: 
+			tags: 
+			- "Book"
+			summary: "get a Book"
+			description: "Book object that should be get"
+			operationId: "getBook"
+			produces:
+			- "application/json"
+			- "application/xml"
+			parameters: 
+			- name: "regno"
+				in: "path"
+				description: "Book object that should be get from the store"
+				required: true
+				type: "integer"
+				format: "int64"
+			responses: 
+				400: 
+					description: "Invalid input"
+					schema: 
+						$ref: 						"#/definitions/Book"
+				404: 
+					description: "object not found"
+				405: 
+					description: "Exception"
+	/Title:
+		post:
+			tags: 
+			- "Title"
+			summary: "Add a new Title"
+			description: "Title object that needs to be added to the store"
+			operationId: "addTitle"
+			consumes:
+			- "application/json"
+			- "application/xml"
+			produces:
+			- "application/json"
+			- "application/xml"
+			parameters: 
+			- in: "body"
+				name: "body"
+				description: "Titleobject that needs to be added to the store"
+				required: true
+				schema: 
+					$ref: 						"#/definitions/Title"
+			responses: 
+				400: 
+					description: "Invalid input"
+				404: 
+					description: "object not found"
+				405: 
+					description: "Exception"
+		put: 
+			tags: 
+			- "Title"
+			summary: "update Title"
+			description: "Title object that needs to be updated to the store"
+			operationId: "updateTitle"
+			consumes:
+			- "application/json"
+			- "application/xml"
+			produces:
+			- "application/json"
+			- "application/xml"
+			parameters: 
+			- in: "body"
+				name: "body"
+				description: "Titleobject that needs to be added to the store"
+				required: true
+				schema: 
+					$ref: 						"#/definitions/Title"
+			responses: 
+				400: 
+					description: "Invalid input"
+				404: 
+					description: "object not found"
+				405: 
+					description: "Exception"
+		delete: 
+			tags: 
+			- "Title"
+			summary: "delete Title"
+			description: "Title object that needs to be deleted from the store"
+			operationId: "deleteTitle"
+			consumes:
+			- "application/json"
+			- "application/xml"
+			produces:
+			- "application/json"
+			- "application/xml"
+			parameters: 
+			- in: "body"
+				name: "body"
+				description: "Titleobject that needs to be deleted from the store"
+				required: true
+				schema: 
+					$ref: 						"#/definitions/Title"
+			responses: 
+				400: 
+					description: "Invalid input"
+				404: 
+					description: "object not found"
+				405: 
+					description: "Exception"
+	/Title/{regno}:
+		get: 
+			tags: 
+			- "Title"
+			summary: "get a Title"
+			description: "Title object that should be get"
+			operationId: "getTitle"
+			produces:
+			- "application/json"
+			- "application/xml"
+			parameters: 
+			- name: "regno"
+				in: "path"
+				description: "Title object that should be get from the store"
+				required: true
+				type: "integer"
+				format: "int64"
+			responses: 
+				400: 
+					description: "Invalid input"
+					schema: 
+						$ref: 						"#/definitions/Title"
+				404: 
+					description: "object not found"
+				405: 
+					description: "Exception"
+definitions: 
+	Bookstore: 
+		type: "object"
+		properties: 
+			book: 
+				type: "array"
+				items: 
+					type: "string"
+		xml:
+			name: "Bookstore"
+	Book: 
+		type: "object"
+		properties: 
+			title: 
+				type: "string"
+				format: "date-time"
+			author: 
+				type: "string"
+				format: "date-time"
+			year: 
+				type: "string"
+				format: "date-time"
+			price: 
+				type: "string"
+				format: "date-time"
+			category: 
+				type: "string"
+				format: "date-time"
+		xml:
+			name: "Book"
+	Title: 
+		type: "object"
+		properties: 
+			value: 
+				type: "string"
+				format: "date-time"
+			lang: 
+				type: "string"
+				format: "date-time"
+		xml:
+			name: "Title"
+externalDocs: 
+	description: "Find out more about Swagger"
+	url: "http://swagger.io"
